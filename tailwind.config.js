@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                body: ["Epilogue", "sans-serif;"],
+                primary: ["Epilogue", "sans-serif"],
             },
             colors: {
                 primary: "#1DC071",
@@ -15,11 +15,11 @@ module.exports = {
                 darkSoft: "#24242C",
                 darkStrock: "#3A3A43",
                 darkRef: "#422C32",
+                text1: "#171725",
                 text2: "#4B5264",
                 text3: "#808191",
-                "icon-color": "#A2A2A8",
                 text5: "#B2B3BD",
-                neutral: "#171725",
+                text4: "#A2A2A8",
                 white: "#ffffff",
                 whiteSoft: "#FCFBFF",
                 graySoft: "#FCFCFC",
