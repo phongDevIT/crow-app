@@ -3,9 +3,126 @@
 @tailwind utilities;
 @layer base {
     body {
-        @apply font-primary text-base;
+        @apply font-primary text-base font-normal mx-auto;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        // max-width: 1992px;
     }
     Input {
         @apply outline-none;
     }
+}
+input:focus + .error-input {
+    display: none;
+}
+.quill {
+    @apply border border-strock rounded-xl;
+    padding: 15px 25px;
+    .ql-toolbar.ql-snow {
+        @apply bg-text4 bg-opacity-10 rounded-xl py-3 px-5 inline-block;
+        border: none;
+        justify-content: center;
+        margin-left: 320px;
+        // display: flex;
+    }
+    .ql-container.ql-snow,
+    .ql-editor {
+        @apply border-none font-primary text-sm;
+    }
+    .ql-editor {
+        @apply pt-10;
+    }
+    .ql-editor.ql-blank::before {
+        @apply text-sm not-italic text-text4;
+    }
+}
+.shadow-1 {
+    box-shadow: -4px 4px 8px rgba(226, 226, 226, 0.2),
+        4px 4px 8px rgba(226, 226, 226, 0.2);
+}
+.ReactModal__Body--open {
+    overflow: hidden;
+}
+.scroll-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scroll-hidden::-webkit-scrollbar {
+    display: none;
+}
+.react-date-picker {
+    @apply w-full py-1 px-6 border rounded-xl text-sm font-medium  placeholder:text-text4 bg-transparent dark:placeholder:text-text2 dark:text-white border-strock text-text1 dark:border-darkStrock;
+}
+
+.react-date-picker__wrapper {
+    width: 500px;
+    height: 40px;
+    display: flex;
+    // justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.react-date-picker__inputGroup__day,
+.react-date-picker__inputGroup__month,
+.react-date-picker__inputGroup__year {
+    width: 50px !important;
+    // align-items: center;
+    // justify-content: center;
+    text-align: center;
+    padding: 0 0;
+}
+.react-calendar {
+    background-color: rgba(111, 103, 103, 0.8);
+    border-radius: 10px;
+    position: absolute;
+    top: 53px;
+    left: 0px;
+    width: 500px;
+    color: #fff;
+}
+.react-date-picker__clear-button {
+    @apply hidden;
+}
+
+// .react-date-picker__calendar-button {
+//     position: absolute;
+//     right: 754px;
+// }
+.react-date-picker__inputGroup {
+    min-width: 0;
+    flex-grow: 0;
+}
+.react-calendar__navigation {
+    display: flex;
+    margin: 10px;
+}
+.react-date-picker__calendar .react-calendar {
+    @apply border-none shadow rounded-lg;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+    @apply bg-transparent;
+}
+.react-calendar__tile:not(
+        .react-calendar__tile--active,
+        .react-calendar__tile--now
+    ):enabled:hover,
+.react-calendar__tile:not(
+        .react-calendar__tile--active,
+        .react-calendar__tile--now
+    ):enabled:focus {
+    @apply bg-transparent text-primary;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus,
+.react-calendar__tile--active,
+.react-calendar__tile--active:hover {
+    @apply bg-primary text-white rounded-lg;
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus,
+.react-calendar__tile--now,
+.react-calendar__tile--now:hover {
+    @apply bg-secondary text-white rounded-2xl;
 }

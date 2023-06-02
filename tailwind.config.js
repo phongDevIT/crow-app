@@ -9,6 +9,8 @@ module.exports = {
             colors: {
                 primary: "#1DC071",
                 secondary: "#6F49FD",
+                secondaryOP: "#A992FE",
+                secondaryBT: "#EEEAFD",
                 darkbg: "#3A3A43",
                 darkSecondary: "#1C1C24",
                 softDark: "#22222C",
@@ -26,6 +28,10 @@ module.exports = {
                 strock: "#F1F1F3",
                 lite: "#FCFCFD",
                 error: "#EB5757",
+                refSoft: "#F9E3E3",
+            },
+            boxShadow: {
+                sdprimary: "10px 10px 20px rgba(211, 211, 211, 0.25)",
             },
         },
     },
